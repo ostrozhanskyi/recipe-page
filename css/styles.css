@@ -34,20 +34,76 @@
 ul, ol {
   margin-top: 0.5em;
   margin-bottom: 1em;
-  padding-left: 40px;
+  padding-left: 1.5rem;
 }
 
 li {
   margin-bottom: 0.25em;
 }
 
-main{
-    width: 1000px;
-    padding: 1rem;
+article{
+    width: 100%;
 }
 
-main > img{
+article > img{
     width: 100%;
+}
+
+main{
+    padding: 1.5rem;
+    background-color: var(--clr-rose50);
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    color: var(--clr-stone600);
+}
+
+h1, h2{
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+}
+
+h1{
+    font-size: 2.2rem;
+    color: var(--clr-stone900);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+h2{
+    font-size: 1.5rem;
+    color: var(--clr-stone800);
+    margin-bottom: 1rem;
+}
+h3{
+    font-size: 1.2rem;
+    color: var(--clr-rose800);
+    margin-bottom: 1rem;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: var(--clr-stone150);
+    margin: 2rem 0;
+}
+
+li{
+    padding-left: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.description {
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.timings{
+    padding-left: 1rem;
+    margin-bottom: 3rem;
+}
+
+.timings > li::marker{
+    color: var(--clr-rose800);
 }
 
 .nutrition {
@@ -55,7 +111,9 @@ main > img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 8px;
+    margin-top: 1.5rem;
 }
 .colored {
     font-weight: bold;
+    color: var(--clr-stone800);
 }
