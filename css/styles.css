@@ -31,6 +31,10 @@
     padding: 0;
 }
 
+body{
+    background-color: var(--clr-stone100);
+}
+
 ul, ol {
   margin-top: 0.5em;
   margin-bottom: 1em;
@@ -43,10 +47,12 @@ li {
 
 article{
     width: 100%;
+    background-color: var(--clr-white);
 }
 
 article > img{
     width: 100%;
+    max-width: 640px;
 }
 
 main{
@@ -87,6 +93,10 @@ hr{
     margin: 2rem 0;
 }
 
+hr.small{
+    margin: 0.5rem 0;
+}
+
 li{
     padding-left: 1rem;
     margin-bottom: 0.75rem;
@@ -102,18 +112,48 @@ li{
     margin-bottom: 3rem;
 }
 
-.timings > li::marker{
+ul li::marker, ol li::marker {
+    color: var(--clr-stone800);
+    font-weight: bold;
+}
+
+.timings li::marker{
     color: var(--clr-rose800);
 }
 
-.nutrition {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 8px;
-    margin-top: 1.5rem;
+.nutrition p{
+    margin-bottom: 1.5rem;
 }
+
+.nutrition-table {
+    position: relative;
+}
+
+.nutrition-table div span:first-child {
+    margin-left: 2rem;
+}
+
+.nutrition-table div span:last-child {
+    position: absolute;
+    left: calc(50% + 2rem);
+}
+
 .colored {
     font-weight: bold;
     color: var(--clr-stone800);
+}
+
+@media screen and (min-width: 650px) {
+    main{
+        padding: 1.5rem 0 0;
+    }
+    article{
+        max-width: 640px;
+        padding: 1.5rem;
+        margin: clamp(20px, 3vw, 150px) auto;
+        border-radius: 1rem;
+      }
+    article > img{
+        border-radius: 8px;
+    }
 }
