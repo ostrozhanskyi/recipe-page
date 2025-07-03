@@ -7,6 +7,10 @@
     --clr-stone800: hsl(14, 45%, 36%);
     --clr-rose800: hsl(332, 51%, 32%);
     --clr-rose50: hsl(330, 100%, 98%);
+
+    --min-width: 320;
+    --max-width: 1024;
+    --max-margin: 150;
 }
 
 @font-face {
@@ -150,7 +154,14 @@ ul li::marker, ol li::marker {
     article{
         max-width: 640px;
         padding: 1.5rem;
-        margin: clamp(20px, 3vw, 150px) auto;
+        margin: clamp(
+            0px,
+            calc(
+            (100vw - var(--min-width) * 1px) / 
+            (var(--max-width) - var(--min-width)) * var(--max-margin)
+            ),
+            var(--max-margin) * 1px
+        ) auto;
         border-radius: 1rem;
       }
     article > img{

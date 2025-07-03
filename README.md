@@ -35,7 +35,8 @@ Screenshot was made by [Screenshot Capture](https://chromewebstore.google.com/de
 
 ### What I learned
 
-<!-- Add something -->
+Didn't figure out how to make the last table in more efficient way;
+Couldn't find a way to make top margin to gradually change from 0 so took a ChatGPT approach with clamp();
 
 ### Useful resources
 
